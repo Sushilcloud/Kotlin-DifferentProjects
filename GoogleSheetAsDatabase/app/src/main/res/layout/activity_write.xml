@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteActivity">
+    
+    <RelativeLayout
+        android:id="@+id/writeProgressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <ProgressBar
+            android:id="@+id/writeProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editBookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Book Name"
+        android:textSize="18sp"
+        android:textColorHint="@color/white"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/editBookAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Book Author"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textColorHint="@color/white"
+        android:layout_below="@id/editBookName"/>
+
+
+    <EditText
+        android:id="@+id/editBookPrice"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/white"
+        android:layout_height="wrap_content"
+        android:hint="Enter Book Price"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:inputType="number"
+        android:layout_below="@id/editBookAuthor"/>
+
+
+    <RatingBar
+        android:background="@color/white"
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBookPrice"
+        android:layout_centerHorizontal="true"
+        android:numStars="5"/>
+
+    <Button
+        android:textSize="20dp"
+        android:text="Save to Drive"
+        android:layout_marginTop="50dp"
+        android:id="@+id/btnSavetoDrive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingBar"/>
+
+
+
+</RelativeLayout>
